@@ -1,13 +1,244 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Lato', sans-serif;
+  background: #768881;
+}
+
+.header {
+  background: #DE8152;
+  text-align: center;
+  padding: 10px 0 0 0;
+  border: 1px solid #DBA985;
+}
+
+.header h1 {
+  font-size: 34px;
+  margin-top: 15px;
+  color: #E12B38;
+}
+
+.header p {
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1200px;
+  color: #fff;
+  margin: auto;
+}
+
+.ReactChart {
+  margin: 25px 0;
+}
+
+.container h2, h3 {
+  padding: 15px 0 5px 0;
+  font-weight: 400;
+}
+
+.container h2 {
+  font-size: 32px;
+  margin: 55px 0 5px 0;
+}
+
+.table .col .th {
+  font-weight: 900;
+  font-size: 16px;
+  color: #E12B38;
+  padding: 10px 0;
+}
+
+.table .grid {
+  padding: 5px 0;
+}
+
+.table .grid.th {
+  background: #4C8D7B;
+  border-radius: 10px 10px 0 0;
+  padding: 5px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+input, select, option {
+  background: #DE8152;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 10px;
+  margin: 0 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border-bottom: 3px solid #DE8152;
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  text-align: center;
+}
+
+select:before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  color: white;
+  content: ">";
+  z-index: 2;
+}
+
+.table .h {
+  color: #15ffbe;
+}
+
+.table .d {
+  color: #E12B38;
+}
+
+.container h3 {
+  font-size: 18px;
+}
+
+.table .col {
+  padding: 5px 10px;
+  width: 22.333%;
+  text-align: center;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.table .col:first-child {
+  width: 33%;
+}
+
+.table {
+  font-weight: 400;
+  margin: 25px 0;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid #DBA985;
+}
+
+.table .grid:not(.th):nth-child(odd) {
+  background: #768881;
+}
+
+.table .grid:not(.th) {
+  background: #6e8079;
+}
+
+.table .grid:last-child {
+  border-radius: 0 0 15px 15px;
+}
+
+p {
+  margin: 15px 0;
+}
+
+.ReactChart {
+  overflow: hidden;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.labelGroup text {
+  fill: #fff !important;
+  font-size: 8px !important;
+}
+
+.filter {
+  margin-top: 25px;
+  background: #4C8D7B;
+  padding: 0;
+  border-top: 1px solid #DBA985;
+  border-bottom: 1px solid #DBA985;
+}
+
+.center {
+  text-align: center;
+}
+
+.credits {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 764px) {
+  .table .col .th {
+    font-size: 14px;
+  }
+  .table .col {
+    font-size: 10px;
+  }
+  .table .col {
+    padding: 0 5px;
+  }
+  .container h2 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  .header {
+    padding: 5px 0 0 0;
+    text-align: center;
+  }
+  .header p {
+    padding: 0;
+  }
+  .header h1 {
+    margin-top: 15px;
+  }
+  .filter {
+    font-size: 14px;
+  }
+}
+
+nav {
+  background: #4C8D7B;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li:after {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  background: #DE8152;
+}
+
+nav li:hover:after, nav .selected>li:after {
+  width: 100%;
+}
+
+nav li {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 0 8px;
+  color: #fff;
+}
+
+.nav li:hover {
+  text-decoration: underline;
 }
